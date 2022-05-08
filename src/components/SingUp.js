@@ -22,7 +22,7 @@ export default function SingUp(){
 
         promise.then((response) => {
             console.log(response.data);
-            // window.location = "/";
+            window.location = "/";
         });
 
         promise.catch(error => {

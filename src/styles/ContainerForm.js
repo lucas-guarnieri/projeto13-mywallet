@@ -7,17 +7,13 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
     
-    img {
-        width: 90px;
-        height: 90px;
-        color: #126BA5;
-        margin-top: 68px; 
-    }
+    
     p {
-        font-family: 'Playball', cursive;
-        font-size:69px;
+        font-size:30px;
         color: #126BA5;
+        margin-top: 95px;
         margin-bottom: 30px;
+        font-family: 'Press Start 2P', cursive;
     }
     form{
         display: flex;
@@ -35,6 +31,7 @@ const Container = styled.div`
         font-size: 19.976px;
         line-height: 25px;
         color:  #DBDBDB;
+        font-family: 'Raleway', sans-serif;
     }
     button {
         width: 303px;
@@ -48,6 +45,7 @@ const Container = styled.div`
         border-radius: 5px;
         font-size: 21px;
         color: #FFFFFF;
+        font-family: 'Raleway', sans-serif;
     }
 
     .button-disable {
@@ -55,12 +53,12 @@ const Container = styled.div`
     }
     
     .link {
-        font-family: 'Lexend Deca';
         font-size: 14px;
         line-height: 17px;
         text-align: center;
         text-decoration-line: underline;
         color: #52B6FF;
+        font-family: 'Raleway', sans-serif;
     }
 `;
 

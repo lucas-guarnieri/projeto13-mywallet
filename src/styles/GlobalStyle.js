@@ -34,11 +34,17 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
+* {
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif; 
+}
+
 body {
 	line-height: 1;
     background-color: lightblue;
-	
 }
+
 ol, ul {
 	list-style: none;
 }
