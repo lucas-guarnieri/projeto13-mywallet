@@ -59,7 +59,7 @@ export default function Home(){
                     <ion-icon name="add-circle-outline"></ion-icon>
                     <p>Nova entrada</p>
                 </button>
-                <button>
+                <button onClick={() => navigate("/add-debit")}>
                     <ion-icon name="remove-circle-outline"></ion-icon>
                     <p>Nova saída</p>
                 </button>

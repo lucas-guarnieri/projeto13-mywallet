@@ -7,6 +7,7 @@ import Login from "./Login";
 import SingUp from "./SingUp";
 import Home from "./Home";
 import AddCredit from "./AddCredit";
+import AddDebit from "./AddDebit";
 
 
 
@@ -22,6 +23,7 @@ export default function App(){
                     <Route path="/sing-up" element={<SingUp />} />
                     <Route path="/home" element={<Home />} />
                     <Route path="/add-credit" element={<AddCredit />} />
+                    <Route path="/add-debit" element={<AddDebit />} />
                 </Routes>
             </BrowserRouter>
         </UserContext.Provider>
