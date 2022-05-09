@@ -5,11 +5,12 @@ import UserContext from "../contexts/UserContext";
 import GlobalStyle from "../styles/GlobalStyle";
 import Login from "./Login";
 import SingUp from "./SingUp";
+import Home from "./Home";
 
 
 
 export default function App(){
-    const [user, setUser] = useState(null);
+    const [user, setUser] = useState();
 
     return (
         <UserContext.Provider value={{ user, setUser }}>
@@ -18,6 +19,7 @@ export default function App(){
                 <Routes>
                     <Route path="/" element={<Login />} />
                     <Route path="/sing-up" element={<SingUp />} />
+                    <Route path="/home" element={<Home />} />
                 </Routes>
             </BrowserRouter>
         </UserContext.Provider>

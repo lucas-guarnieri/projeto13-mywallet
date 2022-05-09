@@ -6,13 +6,18 @@ const Container = styled.div`
 	display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     
-    
+    img {
+        width: 90px;
+        height: 90px;
+    }
+
     p {
         font-size:30px;
         color: #126BA5;
-        margin-top: 95px;
         margin-bottom: 30px;
+        color: #FFFFFF;
         font-family: 'Press Start 2P', cursive;
     }
     form{
@@ -28,16 +33,17 @@ const Container = styled.div`
         border: 1px solid #D5D5D5;
         box-sizing: border-box;
         border-radius: 5px;
-        font-size: 19.976px;
+        font-weight: 400;
+        font-size: 20px;
         line-height: 25px;
-        color:  #DBDBDB;
+        color:  #000000;
         font-family: 'Raleway', sans-serif;
     }
     button {
         width: 303px;
         height: 45px;
         margin: 5px 0 25px 0;
-        background: #52B6FF;
+        background: #3E9C35;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -45,7 +51,7 @@ const Container = styled.div`
         border-radius: 5px;
         font-size: 21px;
         color: #FFFFFF;
-        font-family: 'Raleway', sans-serif;
+        font-family: 'Raleway', sans-serif; 
     }
 
     .button-disable {
@@ -56,8 +62,8 @@ const Container = styled.div`
         font-size: 14px;
         line-height: 17px;
         text-align: center;
-        text-decoration-line: underline;
-        color: #52B6FF;
+        text-decoration-line: none;
+        color: #FFFFFF;;
         font-family: 'Raleway', sans-serif;
     }
 `;

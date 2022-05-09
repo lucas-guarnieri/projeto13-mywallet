@@ -5,6 +5,7 @@ import { useNavigate } from "react-router";
 
 import UserContext from "../contexts/UserContext";
 import Container from "../styles/ContainerForm";
+import money from "../assets/money2.gif"
 
 export default function Login(){
     const [email, setEmail] = useState("");
@@ -24,8 +25,7 @@ export default function Login(){
         
         promise.then(response => {
             setUser(response.data);
-            console.log("LOGADO", response.data); //delete
-            // navigate("/hoje");  TO DO: set correct navigate path
+            navigate("/home");
 
         });
         
@@ -37,6 +37,7 @@ export default function Login(){
 
     return(
         <Container>
+            <img src={money} alt="money" />
             <p>MyWallet</p>
             <form onSubmit={userLogin}>
                 <input 

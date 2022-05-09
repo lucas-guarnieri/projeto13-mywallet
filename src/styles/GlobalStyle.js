@@ -42,7 +42,9 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
-    background-color: lightblue;
+    background-color: #036704;
+	font-family: 'Raleway', sans-serif;
+	box-sizing: border-box; 
 }
 
 ol, ul {
