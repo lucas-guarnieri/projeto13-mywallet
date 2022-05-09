@@ -5,10 +5,12 @@ import { useNavigate } from "react-router";
 
 
 import UserContext from "../contexts/UserContext";
+import Transaction from "./Transaction";
 
 
 export default function Home(){
     const [ transactionsList, setTransactionsList] = useState([]);
+    const [totalSum, setTotalSum] = useState(0);
     const { user, setUser } = useContext(UserContext);
     const navigate = useNavigate();
 
@@ -27,8 +29,11 @@ export default function Home(){
         const promise = axios.get("http://localhost:5000/transactions", config);
         promise.then(res => {
             setTransactionsList(res.data);
+            res.data.map(e => setTotalSum(parseFloat(totalSum) + parseFloat(e.amount))) 
         });
     }, []);
+
+    
 
     return(
         <HomeBox>
@@ -39,11 +44,18 @@ export default function Home(){
             <Box>
                 {transactionsList.length === 0 ? 
                 (<p className="empty-list">Não há registros de entrada ou saída</p>) :
-                (<p>Aqui vai</p>)
+                (<div className="transaction-list">
+                    {transactionsList.map(e => <Transaction key={e._id} transaction={e} />) }
+                    <div className="sum-box">
+                        <p className="saldo">SALDO</p>
+                        <p className="sum">{totalSum}</p>
+                    </div>
+                </div>)
+                
             }
             </Box>
             <ButtonBox>
-                <button>
+                <button onClick={() => navigate("/add-credit")}>
                     <ion-icon name="add-circle-outline"></ion-icon>
                     <p>Nova entrada</p>
                 </button>
@@ -62,7 +74,8 @@ const HomeBox = styled.div`
     padding: 25px 25px 16px 25px; 
     display: flex;
     flex-direction: column;
-    box-sizing: border-box; 
+    box-sizing: border-box;
+
 `
 const Top = styled.div`
     width: 326px;
@@ -81,7 +94,7 @@ const Top = styled.div`
 const Box = styled.div`
     width: 326px;
     height: 446px;
-    margin-top: 22px;
+    margin-top: 12px;
     background: #FFFFFF;
     border-radius: 5px;
 
@@ -97,11 +110,34 @@ const Box = styled.div`
         text-align: center;
         color: #868686;
     }
+
+    .transaction-list {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        border-radius: 5px;
+        
+        
+     }
+
+     .sum-box {
+         width: 100%;
+         height: 30px;
+         position: absolute;
+         bottom: 0px;
+         left: 0px;
+         padding: 0px 12px;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         background-color: #FFFFFF;
+         border-radius: 5px;
+        
+     }
 `
 const ButtonBox= styled.div`
      width: 326px;
-     margin-top: 13px;
-     
+     margin-top: 23px;
      display: flex;
      align-items: center;
      justify-content: space-between;

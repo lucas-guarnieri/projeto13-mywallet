@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 import Container from "../styles/ContainerForm";
+import money from "../assets/money2.gif"
 
 export default function SingUp(){
     const [email, setEmail] = useState("");
@@ -31,6 +32,7 @@ export default function SingUp(){
     }
     return(
         <Container>
+            <img src={money} alt="money" />
             <p>MyWallet</p>
             <form onSubmit={registerUser}>
                 <input 

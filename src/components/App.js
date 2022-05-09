@@ -6,6 +6,7 @@ import GlobalStyle from "../styles/GlobalStyle";
 import Login from "./Login";
 import SingUp from "./SingUp";
 import Home from "./Home";
+import AddCredit from "./AddCredit";
 
 
 
@@ -20,6 +21,7 @@ export default function App(){
                     <Route path="/" element={<Login />} />
                     <Route path="/sing-up" element={<SingUp />} />
                     <Route path="/home" element={<Home />} />
+                    <Route path="/add-credit" element={<AddCredit />} />
                 </Routes>
             </BrowserRouter>
         </UserContext.Provider>
