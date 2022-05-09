@@ -27,7 +27,7 @@ const Container = styled.div`
     input {
         width: 303px;
         height: 45px;
-        margin-top: 5px;
+        margin-top: 10px;
         padding: 0 11px;
         background: #FFFFFF;
         border: 1px solid #D5D5D5;
@@ -42,7 +42,7 @@ const Container = styled.div`
     button {
         width: 303px;
         height: 45px;
-        margin: 5px 0 25px 0;
+        margin: 10px 0 25px 0;
         background: #3E9C35;
         display: flex;
         justify-content: center;
@@ -65,6 +65,24 @@ const Container = styled.div`
         text-decoration-line: none;
         color: #FFFFFF;;
         font-family: 'Raleway', sans-serif;
+    }
+
+    .sub-titles {
+        width: 303px;
+        margin: 25px 0 40px 0;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 31px;
+        
+    }
+
+    .transaction-sections {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 `;
 

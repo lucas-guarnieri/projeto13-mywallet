@@ -43,27 +43,29 @@ export default function AddCredit(){
 
     return(
         <Container>
-            <p>MyWallet</p>
-            <form onSubmit={postTransaction}>
-                <input 
-                    type="number" 
-                    placeholder="Valor" 
-                    value={amount} onChange={e => setAmount(e.target.value)}
-                    disabled = {disable}
-                />
-		        <input 
-                    type="text" 
-                    placeholder="Descrição" 
-                    value={description} onChange={e => setDescription(e.target.value)}
-                    disabled = {disable} 
-                />
-                {disable === "" ? 
-                    (<button type="submit">Salvar entrada</button>) : 
-                    (<button type="submit" className="button-disable" disabled = {disable}>wait...</button>)
-                }
-		        
-            </form>
-            <Link className="link" to="/home">Voltar para página principal</Link>
+            <div className="transaction-sections">
+                <p className="sub-titles">Nova entrada</p>
+                <form onSubmit={postTransaction}>
+                    <input 
+                        type="number" 
+                        placeholder="Valor" 
+                        value={amount} onChange={e => setAmount(e.target.value)}
+                        disabled = {disable}
+                    />
+                    <input 
+                        type="text" 
+                        placeholder="Descrição" 
+                        value={description} onChange={e => setDescription(e.target.value)}
+                        disabled = {disable} 
+                    />
+                    {disable === "" ? 
+                        (<button type="submit">Salvar entrada</button>) : 
+                        (<button type="submit" className="button-disable" disabled = {disable}>wait...</button>)
+                    }
+                    
+                </form>
+                <Link className="link" to="/home">Voltar para página principal</Link>
+            </div>
         </Container>
     );
 }
